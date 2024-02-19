@@ -1,9 +1,11 @@
 import css from './Title.module.css';
 
-export const TitlePhonebook = () => {
+const TitlePhonebook = () => {
   return (
     <>
       <h1 className={css.titlePhonebook}>Phonebook</h1>
     </>
   );
 };
+
+export default TitlePhonebook;
