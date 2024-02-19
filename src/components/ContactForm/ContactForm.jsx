@@ -26,7 +26,7 @@ const ContactForm = () => {
       validationSchema={contactSchema}
       onSubmit={(values, actions) => {
         console.log(values);
-        dispatch(addContact({ id: nanoid(), ...values }));
+        dispatch(addContact.addContact({ id: nanoid(), ...values }));
         actions.resetForm();
       }}
     >

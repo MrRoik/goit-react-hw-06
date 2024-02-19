@@ -4,8 +4,8 @@ import filterContacts from '../../redux/filtersSlice';
 
 const SearchBox = () => {
   const dispatch = useDispatch();
-  const handleFilterItem = evt => dispatch(filterContacts(evt.target.value.trim()));
   const value = useSelector(state => state.filters);
+  const handleFilterItem = evt => dispatch(filterContacts.filterContacts(evt.target.value.trim()));
 
   return (
     <input

@@ -8,7 +8,7 @@ import deleteContact from '../../redux/contactsSlice';
 const Contact = ({ item }) => {
   const { id, name, number } = item;
   const dispatch = useDispatch();
-  const handleDel = () => dispatch(deleteContact(id));
+  const handleDel = () => dispatch(deleteContact.deleteContact(id));
 
   return (
     <>

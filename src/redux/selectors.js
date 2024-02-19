@@ -1,2 +1,3 @@
 const selectedContacts = state => state.contacts;
-export default selectedContacts;
+const selectedFilters = state => state.filters;
+export default {selectedContacts, selectedFilters};
