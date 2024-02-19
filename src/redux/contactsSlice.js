@@ -8,7 +8,7 @@ const initialState =  [
 ] 
 
 const contactsSlice = createSlice({
-name: 'counter',
+name: 'contacts',
 initialState,
 reducers: {
   addContact: (state, action) => {

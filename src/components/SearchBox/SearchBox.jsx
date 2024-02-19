@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './SearchBox.module.css';
 import filterContacts from '../../redux/filtersSlice';
+import { selectedFilters } from '../../redux/selectors';
 
 const SearchBox = () => {
   const dispatch = useDispatch();
-  const value = useSelector(state => state.filters);
+  const value = useSelector(selectedFilters);
   const handleFilterItem = evt => dispatch(filterContacts.filterContacts(evt.target.value.trim()));
 
   return (

@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
-import selectedContacts from '../../redux/selectors';
-import selectedFilters from '../../redux/selectors';
+import { selectedContacts, selectedFilters } from '../../redux/selectors';
+//import selectedFilters from '../../redux/selectors';
 import deleteContact from '../../redux/contactsSlice';
 
 const ContactList = ({ id }) => {
@@ -17,6 +17,8 @@ const ContactList = ({ id }) => {
   const visibleContacts = contacts.filter(contact =>
     contact.name.toLowerCase().trim().includes(filter.toLowerCase())
   );
+
+  //visibleContacts.map ...
 
   return (
     <ul className={css.itemCard}>

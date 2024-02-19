@@ -21,7 +21,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineSlices({
-  filters: filtersReducer,
+  filters: filtersReducer.filtersReducer,
   contacts: contactsReducer.contactsReduser,
 });
 
