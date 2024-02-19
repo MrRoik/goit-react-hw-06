@@ -15,9 +15,3 @@ export const App = () => {
     </div>
   );
 };
-
-/*
-<ContactForm onAdd={addContact} />
-      <SearchBox value={contactName} onChange={setContactName} />
-      <ContactList item={search} contact={visibleContacts} onDel={deleteContact} />
-      */

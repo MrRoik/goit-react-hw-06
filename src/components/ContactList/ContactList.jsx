@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
 import { selectedContacts, selectedFilters } from '../../redux/selectors';
-//import selectedFilters from '../../redux/selectors';
 import deleteContact from '../../redux/contactsSlice';
 
 const ContactList = ({ id }) => {
@@ -18,8 +17,6 @@ const ContactList = ({ id }) => {
     contact.name.toLowerCase().trim().includes(filter.toLowerCase())
   );
 
-  //visibleContacts.map ...
-
   return (
     <ul className={css.itemCard}>
       {visibleContacts.map(item => {
@@ -34,18 +31,3 @@ const ContactList = ({ id }) => {
 };
 
 export default ContactList;
-/*
-export const ContactList = ({ contact, onDel }) => {
-  return (
-    <ul className={css.itemCard}>
-      {contact.map(item => {
-        return (
-          <li key={item.id} className={css.listCard}>
-            <Contact onDelete={onDel} item={item} />
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
-*/
